@@ -1,0 +1,31 @@
+
+Participant:
+  Greg, Mcr, Toerless
+
+Showing slides prepared from last weeks discussion
+
+Michael:
+  6LowPan also needs to be supported today in transit routers to
+  be able to forward packets
+  Q: will this be true for BIER forwarding of packets ?
+     If yes, then BIER would be part of 6LowPan.
+     If no, its a layer below it.
+
+  6LowPan is somewhat of an L2.5, hop-by-hop, aka: answer would be that
+  6LowPan would need to be expanded to know about BIER bitstring hop-by-hop
+
+Toerless Q:
+  Any value in considering to carry non-IPv6 (unicast/multicast) packets ?
+  Maybe not relevant given how 6LowPan compresses the IPv6 header down to "irrelevant" overhead.
+  -> will put non-IP app packets below the line.
+
+Mcr: Storing/Non-Storing mode impact on forwarding:
+  In storing mode, packet goes from uptree to downtree in common parent.
+  In non-storing mode, packets always go through root node.
+  .. would work the same with BIER, just need to write it down.
+
+Mcr:  RPL does not support multicast. Need to run 'NPL' ? need to run specific mode... ?
+Toerless:
+  - Aka: extension to send multicast 6LR to 6LR.
+
+Offline: 6tisch relationship: More an L2 with BW reservation layer, also relies on 6LowPan on top.
